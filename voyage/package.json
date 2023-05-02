@@ -19,6 +19,7 @@
     "gatsby-remark-katex": "^7.9.0",
     "gatsby-remark-prismjs": "^7.9.0",
     "gatsby-remark-responsive-iframe": "^6.9.0",
+    "gatsby-remark-static-images": "^1.2.1",
     "gatsby-source-filesystem": "^5.9.0",
     "gatsby-transformer-remark": "^6.9.0",
     "gatsby-transformer-sharp": "^5.9.0",
