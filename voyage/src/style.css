@@ -11,7 +11,7 @@
   --maxWidth-3xl: 48rem;
   --maxWidth-4xl: 56rem;
   --maxWidth-full: "100%";
-  --maxWidth-wrapper: var(--maxWidth-2xl);
+  --maxWidth-wrapper: var(--maxWidth-3xl);
   --spacing-px: "1px";
   --spacing-0: 0;
   --spacing-1: 0.25rem;
@@ -79,10 +79,6 @@ body {
   font-family: var(--font-body);
   font-size: var(--fontSize-1);
   color: var(--color-text);
-}
-
-footer {
-  padding: var(--spacing-6) var(--spacing-0);
 }
 
 hr {
@@ -239,6 +235,7 @@ a:focus {
 /* Custom classes */
 
 .global-wrapper {
+  min-height: 100vh;
   margin: var(--spacing-0) auto;
   max-width: var(--maxWidth-wrapper);
   padding: var(--spacing-10) var(--spacing-5);
@@ -249,7 +246,31 @@ a:focus {
 }
 
 .global-header {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  justify-content: space-between;
+  grid-template-rows: auto;
   margin-bottom: var(--spacing-12);
+}
+
+@media screen and (max-width: 768px) {
+  .resume {
+    display: none;
+  }
+}
+
+.main-wrapper {
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+  grid-column-gap: 16px;
+  grid-row-gap: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .main-wrapper {
+    grid-template-columns: 1fr;
+  }
 }
 
 .main-heading {
@@ -277,6 +298,51 @@ a:focus {
   margin-bottom: var(--spacing-4);
 }
 
+.article-list {
+  border-top: 2px dotted #e0e0e0;
+}
+
+.summary-box {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  align-items: center;
+  gap: 32px;
+}
+
+@media screen and (max-width: 768px) {
+  .summary-box {
+    grid-template-columns: 1fr;
+  }
+}
+
+.image-wrapper {
+  grid-row: 1 / 2;
+  grid-column: 1;
+  width: 144px;
+}
+
+.image-wrapper > img {
+  width: 144px;
+  object-fit: cover;
+  border-radius: 18px;
+}
+
+.tags-article {
+  display: flex;
+  gap: 8px;
+  margin-bottom: var(--spacing-2);
+}
+
+.description-box {
+  max-width: 356px;
+}
+
+@media screen and (max-width: 768px) {
+  .description-box {
+    max-width: 100%;
+  }
+}
+
 .header-link-home {
   font-weight: var(--fontWeight-bold);
   font-family: var(--font-heading);
@@ -284,9 +350,21 @@ a:focus {
   font-size: var(--fontSize-2);
 }
 
+.ship-icon {
+  margin-left: 16px;
+}
+
 .bio {
   display: flex;
   margin-bottom: var(--spacing-16);
+  padding: 16px;
+  border-left: solid var(--color-primary);
+}
+
+@media screen and (max-width: 768px) {
+  .bio {
+    display: none;
+  }
 }
 
 .bio p {
@@ -298,6 +376,11 @@ a:focus {
   margin-bottom: var(--spacing-0);
   min-width: 50px;
   border-radius: 100%;
+}
+
+.authoer-name {
+  font-weight: 700;
+  font-size: 24px;
 }
 
 .blog-post header h1 {
