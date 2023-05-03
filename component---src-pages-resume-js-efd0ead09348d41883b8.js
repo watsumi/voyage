@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkvoyage=self.webpackChunkvoyage||[]).push([[903],{9023:function(e,t,a){a.r(t),a.d(t,{Head:function(){return i}});var n=a(7294),l=a(8678),c=a(9357);const i=()=>n.createElement(c.Z,{title:"職務経歴書"});t.default=e=>{let{data:t,location:a}=e;const c=t.site.siteMetadata.title;return n.createElement(l.Z,{location:a,title:c},n.createElement("h1",null,"職務経歴書"))}}}]);
+//# sourceMappingURL=component---src-pages-resume-js-efd0ead09348d41883b8.js.map
