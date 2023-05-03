@@ -28,10 +28,10 @@ const BlogPostTemplate = ({
           itemProp="articleBody"
         />
         <hr />
-        <footer>
-          <Bio />
-        </footer>
       </article>
+      <footer>
+        <Bio />
+      </footer>
       <nav className="blog-post-nav">
         <ul
           style={{
@@ -86,12 +86,13 @@ export const pageQuery = graphql`
     }
     markdownRemark(id: { eq: $id }) {
       id
-      excerpt(pruneLength: 160)
+      excerpt(pruneLength: 80)
       html
       frontmatter {
         title
-        date(formatString: "MMMM DD, YYYY")
+        date(formatString: "YYYY-MM-DD")
         description
+        tags
       }
     }
     previous: markdownRemark(id: { eq: $previousPostId }) {
